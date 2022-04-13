@@ -17,7 +17,7 @@ namespace MyHW
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHomeWork());
+            Application.Run(new Form1());
         }
     }
 }
