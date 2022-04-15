@@ -34,7 +34,6 @@ namespace MyHW
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.categoriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnSearch = new System.Windows.Forms.Button();
-            this.categoriesTableAdapter = new MyHW.NorthwindDataSetTableAdapters.CategoriesTableAdapter();
             this.dataSet1 = new MyHW.DataSet();
             this.productsTableAdapter1 = new MyHW.DataSetTableAdapters.ProductsTableAdapter();
             this.categoriesTableAdapter1 = new MyHW.DataSetTableAdapters.CategoriesTableAdapter();
@@ -71,10 +70,6 @@ namespace MyHW
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            // 
-            // categoriesTableAdapter
-            // 
-            this.categoriesTableAdapter.ClearBeforeFill = true;
             // 
             // dataSet1
             // 
@@ -126,7 +121,6 @@ namespace MyHW
         private DataSetTableAdapters.ProductsTableAdapter productsTableAdapter1;
         private DataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter1;
         private System.Windows.Forms.BindingSource categoriesBindingSource;
-        private NorthwindDataSetTableAdapters.CategoriesTableAdapter categoriesTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

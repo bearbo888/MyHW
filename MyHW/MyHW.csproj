@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,12 +67,24 @@
     <Compile Include="1. Frm標準練習.designer.cs">
       <DependentUpon>1. Frm標準練習.cs</DependentUpon>
     </Compile>
-    <Compile Include="Class1.cs" />
-    <Compile Include="2.FrmCategoryProducts.cs">
+    <Compile Include="5. FrmAdventureWorks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="2.FrmCategoryProducts.Designer.cs">
-      <DependentUpon>2.FrmCategoryProducts.cs</DependentUpon>
+    <Compile Include="5. FrmAdventureWorks.designer.cs">
+      <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="6. FrmMyAlbum_V1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="6. FrmMyAlbum_V1.Designer.cs">
+      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="2. FrmCategoryProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="2. FrmCategoryProducts.Designer.cs">
+      <DependentUpon>2. FrmCategoryProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet.cs">
       <DependentUpon>DataSet.xsd</DependentUpon>
@@ -67,37 +94,56 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="3.FrmProducts.cs">
+    <Compile Include="3. FrmProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="3.FrmProducts.Designer.cs">
-      <DependentUpon>3.FrmProducts.cs</DependentUpon>
+    <Compile Include="3. FrmProducts.Designer.cs">
+      <DependentUpon>3. FrmProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
+    <Compile Include="4. FrmDataSet 結構.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NorthwindDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
+    <Compile Include="4. FrmDataSet 結構.Designer.cs">
+      <DependentUpon>4. FrmDataSet 結構.cs</DependentUpon>
     </Compile>
-    <Compile Include="NorthwindDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
+    <Compile Include="7. FrmLogon.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="7. FrmLogon.Designer.cs">
+      <DependentUpon>7. FrmLogon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmToolCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmToolCRUD.Designer.cs">
+      <DependentUpon>frmToolCRUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NorthwindDataSetTableAdapters\CategoriesTableAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="1. Frm標準練習.resx">
       <DependentUpon>1. Frm標準練習.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="2.FrmCategoryProducts.resx">
-      <DependentUpon>2.FrmCategoryProducts.cs</DependentUpon>
+    <EmbeddedResource Include="2. FrmCategoryProducts.resx">
+      <DependentUpon>2. FrmCategoryProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="3.FrmProducts.resx">
-      <DependentUpon>3.FrmProducts.cs</DependentUpon>
+    <EmbeddedResource Include="3. FrmProducts.resx">
+      <DependentUpon>3. FrmProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="4. FrmDataSet 結構.resx">
+      <DependentUpon>4. FrmDataSet 結構.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="5. FrmAdventureWorks.resx">
+      <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="6. FrmMyAlbum_V1.resx">
+      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7. FrmLogon.resx">
+      <DependentUpon>7. FrmLogon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmToolCRUD.resx">
+      <DependentUpon>frmToolCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,39 +165,6 @@
     <None Include="DataSet.xss">
       <DependentUpon>DataSet.xsd</DependentUpon>
     </None>
-    <None Include="NorthwindDataSet.xsc">
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NorthwindDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NorthwindDataSet.xss">
-      <DependentUpon>NorthwindDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindDataSet1.xsc">
-      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NorthwindDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NorthwindDataSet1.xss">
-      <DependentUpon>NorthwindDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindDataSet2.xsc">
-      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="NorthwindDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>NorthwindDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="NorthwindDataSet2.xss">
-      <DependentUpon>NorthwindDataSet2.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +177,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database_log.ldf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

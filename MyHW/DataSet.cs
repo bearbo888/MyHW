@@ -7,9 +7,12 @@
     }
 }
 
-namespace MyHW.DataSetTableAdapters {
-    
-    
+namespace MyHW.DataSetTableAdapters
+{
+    partial class ProductPhotoTableAdapter
+    {
+    }
+
     public partial class ProductsTableAdapter {
     }
 }
