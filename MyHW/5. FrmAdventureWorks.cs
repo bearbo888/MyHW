@@ -28,14 +28,7 @@ namespace MyHomeWork
 
         private void button2_Click(object sender, EventArgs e) // sort ASC
         {
-            if (comboBox1.SelectedItem == null)
-            {
-                productPhotoTableAdapter1.FillByOBDate(this.dataSet1.ProductPhoto,dateTimePicker1.Value,dateTimePicker2.Value);
-            }
-            else {
-                productPhotoTableAdapter1.FillByOBYear(this.dataSet1.ProductPhoto, Decimal.Parse(comboBox1.SelectedItem.ToString()));
-            }
-
+            productPhotoTableAdapter1.FillByOBDate(this.dataSet1.ProductPhoto, dateTimePicker1.Value, dateTimePicker2.Value);
             bindingSource1.DataSource = this.dataSet1.ProductPhoto;
             this.dataGridView1.DataSource = bindingSource1;
         }

@@ -112,6 +112,12 @@
     <Compile Include="7. FrmLogon.Designer.cs">
       <DependentUpon>7. FrmLogon.cs</DependentUpon>
     </Compile>
+    <Compile Include="7. FrmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="7. FrmCustomers.Designer.cs">
+      <DependentUpon>7. FrmCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmToolCRUD.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="6. FrmMyAlbum_V1.resx">
       <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="7. FrmCustomers.resx">
+      <DependentUpon>7. FrmCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7. FrmLogon.resx">
       <DependentUpon>7. FrmLogon.cs</DependentUpon>
@@ -186,6 +195,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <Content Include="pic\taipei0.jpg" />
+    <Content Include="pic\taipei1.jpg" />
+    <Content Include="pic\taipei2.jpg" />
+    <Content Include="pic\taipei3.jpg" />
+    <Content Include="pic\taipei4.jpg" />
+    <Content Include="pic\taipei5.png" />
+    <Content Include="pic\taipei6.jpg" />
+    <Content Include="pic\taipei7.jpg" />
+    <Content Include="pic\taipei8.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">

@@ -78,7 +78,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show(input + " is odd number.");
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("Input intger number");
             }

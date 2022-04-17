@@ -23,18 +23,19 @@ namespace MyHW
             cRUD.Show();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lkTaipei_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            cityDataGridView.DataBindings.Clear();
             cityTableAdapter.FillBy(this.dataSet1.city,"台北");
             bindingSource1.DataSource = dataSet1.city;
-            //dataGridView1.DataSource = bindingSource1;
+            cityDataGridView.DataSource = bindingSource1;
 
-            this.textBox2.DataBindings.Add("text", this.bindingSource1, "name");
+            this.cbCountry.DataBindings.Add("text", this.bindingSource1, "name");
             this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "pic",true);
 
         }
 
-        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void lkParis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             frmToolCRUD cRUD = new frmToolCRUD();
             cRUD.Show();
@@ -58,7 +59,7 @@ namespace MyHW
         private void button14_Click(object sender, EventArgs e)
         {
             ImageConverter converter = new ImageConverter();
-            cityTableAdapter.Insert(textBox2.Text, (byte[])converter.ConvertTo(pictureBox1.Image, typeof(byte[])));
+            cityTableAdapter.Insert(cbCountry.Text, (byte[])converter.ConvertTo(pictureBox1.Image, typeof(byte[])));
             dataSet1.Tables["city"].AcceptChanges();
         }
 
@@ -66,6 +67,13 @@ namespace MyHW
         {
             cityTableAdapter.Update(dataSet1.city);
             dataSet1.Tables["city"].AcceptChanges();
+        }
+
+        private void FrmMyAlbum_V1_Load(object sender, EventArgs e)
+        {
+            cityTableAdapter.Fill(this.dataSet1.city);
+            bindingSource1.DataSource = dataSet1.city;
+            cityDataGridView.DataSource = bindingSource1;
         }
     }
 }
