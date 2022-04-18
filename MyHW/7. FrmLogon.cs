@@ -41,14 +41,17 @@ namespace MyHW
 
             if (chk == true)
             {
-                using (SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString))
+                if (String.IsNullOrWhiteSpace(UsernameTextBox.Text) || String.IsNullOrWhiteSpace(PasswordTextBox.Text))
                 {
-                    SqlCommand command = new SqlCommand("Insert into Member(username,password) values (@username,@password)", conn);
-                    command.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = UsernameTextBox.Text;
-                    command.Parameters.Add("@password", SqlDbType.NVarChar, 50).Value = PasswordTextBox.Text;
-                    conn.Open();
-                    command.ExecuteNonQuery();
-                }
+                    using (SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString))
+                    {
+                        SqlCommand command = new SqlCommand("Insert into Member(username,password) values (@username,@password)", conn);
+                        command.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = UsernameTextBox.Text;
+                        command.Parameters.Add("@password", SqlDbType.NVarChar, 50).Value = PasswordTextBox.Text;
+                        conn.Open();
+                        command.ExecuteNonQuery();
+                    }
+                } 
             }
         }
 
@@ -66,19 +69,11 @@ namespace MyHW
                 {
                     MessageBox.Show("登入成功");
                     tabControl1.SelectedTab = tabControl1.TabPages[1];
-                    //FrmCustomers frmCustomers = new FrmCustomers();
-                    //frmCustomers.TopLevel = false;
-                    //frmCustomers.FormBorderStyle = FormBorderStyle.None;
-                    //frmCustomers.Dock = DockStyle.Fill;
-                    //panel1.Controls.Add(frmCustomers);
-                    //frmCustomers.Show();
                 }
                 else
                 {
                     MessageBox.Show("登入失敗");
                 }
-
-                conn.Dispose();
             }
 
            
@@ -178,10 +173,15 @@ namespace MyHW
                             li.SubItems.Add(dr[col].ToString());
                         }
                     }
-
                     listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
                 }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedTab = tabControl1.TabPages[0];
+            UsernameTextBox.Text = PasswordTextBox.Text = "";
         }
     }
 }

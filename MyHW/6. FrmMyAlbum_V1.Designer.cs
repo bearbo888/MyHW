@@ -134,7 +134,7 @@ namespace MyHW
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             // 
@@ -153,14 +153,14 @@ namespace MyHW
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer2.Panel1.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel1.Controls.Add(this.lkParis);
             this.splitContainer2.Panel1.Controls.Add(this.lktaipei);
             // 
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.AutoScroll = true;
-            this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.Transparent;
             this.splitContainer2.Panel2.Controls.Add(this.cbCountry);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Controls.Add(this.cityDataGridView);
