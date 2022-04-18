@@ -50,6 +50,7 @@ namespace MyHW
             this.cbCountry.Name = "cbCountry";
             this.cbCountry.Size = new System.Drawing.Size(135, 20);
             this.cbCountry.TabIndex = 3;
+            this.cbCountry.SelectedIndexChanged += new System.EventHandler(this.cbCountry_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -92,19 +93,19 @@ namespace MyHW
             // detailToolStripMenuItem
             // 
             this.detailToolStripMenuItem.Name = "detailToolStripMenuItem";
-            this.detailToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.detailToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.detailToolStripMenuItem.Text = "Detail";
             // 
             // largeToolStripMenuItem
             // 
             this.largeToolStripMenuItem.Name = "largeToolStripMenuItem";
-            this.largeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.largeToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.largeToolStripMenuItem.Text = "Large";
             // 
             // smallToolStripMenuItem
             // 
             this.smallToolStripMenuItem.Name = "smallToolStripMenuItem";
-            this.smallToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.smallToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.smallToolStripMenuItem.Text = "Small";
             // 
             // orderByToolStripMenuItem
