@@ -151,14 +151,7 @@ namespace MyHW
 
         private void lkTaipei_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            cityDataGridView.DataBindings.Clear();
-            cityTableAdapter1.FillBy(this.dataSet1.city,"台北");
-            bindingSource1.DataSource = dataSet1.city;
-            cityDataGridView.DataSource = bindingSource1;
-
-            this.cbCountry.DataBindings.Add("text", this.bindingSource1, "name");
-            this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "pic",true);
-
+            binding(lktaipei.Text);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -243,5 +236,25 @@ namespace MyHW
         {
 
         }
+
+        private void lkParis_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            binding(lkParis.Text);
+        }
+
+        void binding(string city)
+        {
+            cityDataGridView.DataBindings.Clear();
+            cbCountry.DataBindings.Clear();
+            pictureBox1.DataBindings.Clear();
+
+            cityTableAdapter1.FillBy(this.dataSet1.city, city);
+            bindingSource1.DataSource = dataSet1.city;
+            cityDataGridView.DataSource = bindingSource1;
+
+            this.cbCountry.DataBindings.Add("text", this.bindingSource1, "name");
+            this.pictureBox1.DataBindings.Add("Image", this.bindingSource1, "pic", true);
+        }
+
     }
 }

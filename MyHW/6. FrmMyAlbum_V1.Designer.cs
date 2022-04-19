@@ -118,7 +118,8 @@ namespace MyHW
             this.lkParis.Size = new System.Drawing.Size(81, 34);
             this.lkParis.TabIndex = 2;
             this.lkParis.TabStop = true;
-            this.lkParis.Text = "巴黎";
+            this.lkParis.Text = "倫敦";
+            this.lkParis.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkParis_LinkClicked);
             // 
             // label1
             // 
