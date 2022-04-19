@@ -25,8 +25,9 @@ namespace MyHW
         private void button1_Click(object sender, EventArgs e)
         {
             bool chk = true;
-            using (SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString))
+            try
             {
+                SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString);
                 SqlCommand command = new SqlCommand("select username From Member where username=@username", conn);
                 command.Parameters.AddWithValue("@username", UsernameTextBox.Text);
                 conn.Open();
@@ -38,18 +39,28 @@ namespace MyHW
                     MessageBox.Show("使用者名稱已經註冊");
                 }
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
 
             if (chk == true)
             {
-                if (String.IsNullOrWhiteSpace(UsernameTextBox.Text) || String.IsNullOrWhiteSpace(PasswordTextBox.Text))
+                if (!String.IsNullOrWhiteSpace(UsernameTextBox.Text) || !String.IsNullOrWhiteSpace(PasswordTextBox.Text))
                 {
-                    using (SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString))
+                    try
                     {
+                        SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString);
                         SqlCommand command = new SqlCommand("Insert into Member(username,password) values (@username,@password)", conn);
                         command.Parameters.Add("@username", SqlDbType.NVarChar, 50).Value = UsernameTextBox.Text;
                         command.Parameters.Add("@password", SqlDbType.NVarChar, 50).Value = PasswordTextBox.Text;
                         conn.Open();
                         command.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 } 
             }
