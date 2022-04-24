@@ -14,7 +14,6 @@ namespace MyHW
 {
     public partial class FrmLogon : Form
     {
-        bool firsttime = true;
         public FrmLogon()
         {
             InitializeComponent();

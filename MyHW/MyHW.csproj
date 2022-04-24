@@ -112,11 +112,11 @@
     <Compile Include="7. FrmLogon.Designer.cs">
       <DependentUpon>7. FrmLogon.cs</DependentUpon>
     </Compile>
-    <Compile Include="7. FrmCustomers.cs">
+    <Compile Include="8. FrmTreeview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="7. FrmCustomers.Designer.cs">
-      <DependentUpon>7. FrmCustomers.cs</DependentUpon>
+    <Compile Include="8. FrmTreeview.Designer.cs">
+      <DependentUpon>8. FrmTreeview.cs</DependentUpon>
     </Compile>
     <Compile Include="NorthwindDataSetTableAdapters\CategoriesTableAdapter.cs" />
     <Compile Include="Program.cs" />
@@ -139,8 +139,8 @@
     <EmbeddedResource Include="6. FrmMyAlbum_Final.resx">
       <DependentUpon>6. FrmMyAlbum_Final.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="7. FrmCustomers.resx">
-      <DependentUpon>7. FrmCustomers.cs</DependentUpon>
+    <EmbeddedResource Include="8. FrmTreeview.resx">
+      <DependentUpon>8. FrmTreeview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7. FrmLogon.resx">
       <DependentUpon>7. FrmLogon.cs</DependentUpon>
