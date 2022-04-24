@@ -73,11 +73,11 @@
     <Compile Include="5. FrmAdventureWorks.designer.cs">
       <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
     </Compile>
-    <Compile Include="6. FrmMyAlbum_V1.cs">
+    <Compile Include="6. FrmMyAlbum_Final.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="6. FrmMyAlbum_V1.Designer.cs">
-      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    <Compile Include="6. FrmMyAlbum_Final.Designer.cs">
+      <DependentUpon>6. FrmMyAlbum_Final.cs</DependentUpon>
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="2. FrmCategoryProducts.cs">
@@ -118,12 +118,6 @@
     <Compile Include="7. FrmCustomers.Designer.cs">
       <DependentUpon>7. FrmCustomers.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmToolCRUD.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmToolCRUD.Designer.cs">
-      <DependentUpon>frmToolCRUD.cs</DependentUpon>
-    </Compile>
     <Compile Include="NorthwindDataSetTableAdapters\CategoriesTableAdapter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,17 +136,14 @@
     <EmbeddedResource Include="5. FrmAdventureWorks.resx">
       <DependentUpon>5. FrmAdventureWorks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="6. FrmMyAlbum_V1.resx">
-      <DependentUpon>6. FrmMyAlbum_V1.cs</DependentUpon>
+    <EmbeddedResource Include="6. FrmMyAlbum_Final.resx">
+      <DependentUpon>6. FrmMyAlbum_Final.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7. FrmCustomers.resx">
       <DependentUpon>7. FrmCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="7. FrmLogon.resx">
       <DependentUpon>7. FrmLogon.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmToolCRUD.resx">
-      <DependentUpon>frmToolCRUD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

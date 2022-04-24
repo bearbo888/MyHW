@@ -14,6 +14,7 @@ namespace MyHW
 {
     public partial class FrmLogon : Form
     {
+        bool firsttime = true;
         public FrmLogon()
         {
             InitializeComponent();
@@ -99,6 +100,8 @@ namespace MyHW
 
                 cbCountry.Items.Clear();
 
+                this.cbCountry.Items.Add("All");
+
                 while (dr.Read())
                 {
                     this.cbCountry.Items.Add(dr[0]);
@@ -129,7 +132,9 @@ namespace MyHW
         {
             using (SqlConnection conn = new SqlConnection(Properties.Settings.Default.NorthwindConnectionString))
             {
-                SqlCommand command = new SqlCommand("select * from Customers where Country=@country", conn);
+                SqlCommand command = new SqlCommand();
+                command.Connection = conn;
+                command.CommandText = (cbCountry.SelectedItem.ToString().Trim() == "All") ? "select * from Customers" : "select * from Customers where Country = @country";
                 command.Parameters.AddWithValue("@country", cbCountry.Text);
                 conn.Open();
 
@@ -161,7 +166,9 @@ namespace MyHW
         {
             using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
             {
-                SqlCommand command = new SqlCommand("select * from Customers where Country = @country", conn);
+                SqlCommand command = new SqlCommand();
+                command.Connection = conn;
+                command.CommandText = (cbCountry.SelectedItem.ToString().Trim() == "All") ? "select * from Customers" : "select * from Customers where Country = @country";
                 command.Parameters.AddWithValue("@country", cbCountry.SelectedItem);
                 conn.Open();
                 SqlDataReader dr = command.ExecuteReader();
@@ -192,6 +199,7 @@ namespace MyHW
         private void button2_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedTab = tabControl1.TabPages[0];
+            this.cbCountry.SelectedIndex = 0;
             UsernameTextBox.Text = PasswordTextBox.Text = "";
         }
     }
