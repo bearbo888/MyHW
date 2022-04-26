@@ -1,7 +1,7 @@
 ﻿
 namespace MyHW
 {
-    partial class FrmMyAlbum_V1
+    partial class  FrmMyAlbum_Final
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@ namespace MyHW
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label nameLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMyAlbum_V1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMyAlbum_Final));
             System.Windows.Forms.Label idLabel1;
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();

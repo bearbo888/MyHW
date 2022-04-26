@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MyHW
 {
-    public partial class FrmMyAlbum_V1 : Form
+    public partial class FrmMyAlbum_Final : Form
     {
-        public FrmMyAlbum_V1()
+        public FrmMyAlbum_Final()
         {
             InitializeComponent();
 
