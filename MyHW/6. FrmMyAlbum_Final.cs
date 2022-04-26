@@ -260,7 +260,7 @@ namespace MyHW
             bindingNavigator1.BindingSource = bindingSource1;
             cityDataGridView.DataSource = bindingSource1;
 
-            this.idTextBox1.DataBindings.Add("text", this.bindingSource, "id");
+            this.idTextBox1.DataBindings.Add("text", this.bindingSource1, "id");
             this.nameTextBox1.DataBindings.Add("text", this.bindingSource, "Name");
             this.picPictureBox.DataBindings.Add("Image", this.bindingSource1, "pic", true);
         }
