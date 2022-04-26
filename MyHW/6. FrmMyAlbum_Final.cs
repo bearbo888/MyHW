@@ -236,6 +236,7 @@ namespace MyHW
             cityNoDataGridView.DataBindings.Clear();
             idTextBox.DataBindings.Clear();
             nameTextBox.DataBindings.Clear();
+            picPictureBox.DataBindings.Clear();
 
             cityNoTableAdapter.Fill(this.dataSet1.cityNo);
             bindingSource.DataSource = this.dataSet1.cityNo;
