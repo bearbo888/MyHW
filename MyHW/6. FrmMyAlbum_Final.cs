@@ -215,6 +215,40 @@ namespace MyHW
             ShowImage();
         }
 
+        private void btnBrowse2_Click(object sender, EventArgs e)
+        {
+            openFileDialog.Filter = "JPG files (*.jpg)|*.jpg|All files (*.*)|*.*";
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                FileStream stream = new FileStream(openFileDialog.FileName, FileMode.Open);
+                Image image = Image.FromStream(stream);
+
+                MemoryStream ms = new MemoryStream();
+                image.Save(ms, ImageFormat.Jpeg);
+                byte[] bufferPhoto = ms.GetBuffer();
+
+                try
+                {
+                    SqlConnection conn = new SqlConnection(Settings.Default.DatabaseConnectionString);
+                    SqlCommand command = new SqlCommand("UPDATE city set pic = @pic where id = @id", conn);
+                    command.Parameters.AddWithValue("@id", idTextBox1.Text);
+                    command.Parameters.AddWithValue("@pic", bufferPhoto);
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            flowLayoutPanel1.Controls.Clear();
+            ShowImage();
+            bindingCity(int.Parse(idTextBox.Text));
+        }
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             flowLayoutPanel1.Controls.Clear();

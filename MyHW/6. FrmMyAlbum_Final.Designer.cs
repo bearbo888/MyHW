@@ -33,8 +33,8 @@ namespace MyHW
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nameLabel;
             System.Windows.Forms.Label nameLabel1;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMyAlbum_Final));
             System.Windows.Forms.Label idLabel1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMyAlbum_Final));
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -43,6 +43,12 @@ namespace MyHW
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
+            this.tp2 = new System.Windows.Forms.TabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tp3 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.bindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
@@ -57,31 +63,15 @@ namespace MyHW
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.idTextBox = new System.Windows.Forms.TextBox();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.cityNoDataGridView = new System.Windows.Forms.DataGridView();
-            this.nameTextBox1 = new System.Windows.Forms.TextBox();
-            this.picPictureBox = new System.Windows.Forms.PictureBox();
-            this.cityDataGridView = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.tp2 = new System.Windows.Forms.TabPage();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.btnBrowse = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cityNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new MyHW.DataSet();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityNoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new MyHW.DataSet();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox = new System.Windows.Forms.TextBox();
+            this.idTextBox1 = new System.Windows.Forms.TextBox();
             this.cityBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tableAdapterManager = new MyHW.DataSetTableAdapters.TableAdapterManager();
-            this.tableAdapterManager1 = new MyHW.DataSetTableAdapters.TableAdapterManager();
-            this.cityNoTableAdapter = new MyHW.DataSetTableAdapters.cityNoTableAdapter();
-            this.cityTableAdapter1 = new MyHW.DataSetTableAdapters.cityTableAdapter();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -94,10 +84,20 @@ namespace MyHW
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.idTextBox1 = new System.Windows.Forms.TextBox();
+            this.nameTextBox1 = new System.Windows.Forms.TextBox();
+            this.picPictureBox = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.cityDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableAdapterManager = new MyHW.DataSetTableAdapters.TableAdapterManager();
+            this.tableAdapterManager1 = new MyHW.DataSetTableAdapters.TableAdapterManager();
+            this.cityNoTableAdapter = new MyHW.DataSetTableAdapters.cityNoTableAdapter();
+            this.cityTableAdapter1 = new MyHW.DataSetTableAdapters.cityTableAdapter();
             idLabel = new System.Windows.Forms.Label();
             nameLabel = new System.Windows.Forms.Label();
             nameLabel1 = new System.Windows.Forms.Label();
@@ -112,6 +112,11 @@ namespace MyHW
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
             this.splitContainer4.SuspendLayout();
+            this.tp2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
             this.tp3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -120,20 +125,15 @@ namespace MyHW
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator)).BeginInit();
             this.bindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityNoDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).BeginInit();
-            this.tp2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityNoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // idLabel
@@ -162,6 +162,15 @@ namespace MyHW
             nameLabel1.Size = new System.Drawing.Size(32, 12);
             nameLabel1.TabIndex = 32;
             nameLabel1.Text = "城市:";
+            // 
+            // idLabel1
+            // 
+            idLabel1.AutoSize = true;
+            idLabel1.Location = new System.Drawing.Point(25, 54);
+            idLabel1.Name = "idLabel1";
+            idLabel1.Size = new System.Drawing.Size(18, 12);
+            idLabel1.TabIndex = 38;
+            idLabel1.Text = "Id:";
             // 
             // label1
             // 
@@ -245,7 +254,7 @@ namespace MyHW
             this.linkLabel1.Location = new System.Drawing.Point(37, 91);
             this.linkLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(75, 34);
+            this.linkLabel1.Size = new System.Drawing.Size(81, 34);
             this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "倫敦";
@@ -260,7 +269,7 @@ namespace MyHW
             this.linkLabel2.Location = new System.Drawing.Point(37, 35);
             this.linkLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(75, 34);
+            this.linkLabel2.Size = new System.Drawing.Size(81, 34);
             this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "台北";
@@ -274,6 +283,73 @@ namespace MyHW
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
             this.flowLayoutPanel2.Size = new System.Drawing.Size(732, 474);
             this.flowLayoutPanel2.TabIndex = 0;
+            // 
+            // tp2
+            // 
+            this.tp2.Controls.Add(this.splitContainer3);
+            this.tp2.Location = new System.Drawing.Point(4, 22);
+            this.tp2.Name = "tp2";
+            this.tp2.Padding = new System.Windows.Forms.Padding(3);
+            this.tp2.Size = new System.Drawing.Size(906, 480);
+            this.tp2.TabIndex = 2;
+            this.tp2.Text = "新增相片管理";
+            this.tp2.UseVisualStyleBackColor = true;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.btnBrowse);
+            this.splitContainer3.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer3.Panel1.Controls.Add(this.label3);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel1);
+            this.splitContainer3.Size = new System.Drawing.Size(900, 474);
+            this.splitContainer3.SplitterDistance = 129;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.Location = new System.Drawing.Point(28, 65);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(166, 23);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Floder....";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(73, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 1;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 12);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "選分類";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 341);
+            this.flowLayoutPanel1.TabIndex = 0;
             // 
             // tp3
             // 
@@ -359,8 +435,8 @@ namespace MyHW
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(27, 22);
-            this.bindingNavigatorCountItem1.Text = "/{0}";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "項目總數";
             // 
             // bindingNavigatorDeleteItem1
@@ -399,7 +475,6 @@ namespace MyHW
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "位置";
             this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
@@ -433,23 +508,6 @@ namespace MyHW
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
-            // idTextBox
-            // 
-            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityNoBindingSource, "Id", true));
-            this.idTextBox.Location = new System.Drawing.Point(93, 49);
-            this.idTextBox.Name = "idTextBox";
-            this.idTextBox.Size = new System.Drawing.Size(100, 22);
-            this.idTextBox.TabIndex = 2;
-            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
-            // 
-            // nameTextBox
-            // 
-            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityNoBindingSource, "Name", true));
-            this.nameTextBox.Location = new System.Drawing.Point(93, 77);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.nameTextBox.TabIndex = 4;
-            // 
             // cityNoDataGridView
             // 
             this.cityNoDataGridView.AutoGenerateColumns = false;
@@ -464,135 +522,6 @@ namespace MyHW
             this.cityNoDataGridView.RowTemplate.Height = 24;
             this.cityNoDataGridView.Size = new System.Drawing.Size(139, 220);
             this.cityNoDataGridView.TabIndex = 0;
-            // 
-            // nameTextBox1
-            // 
-            this.nameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityBindingSource, "name", true));
-            this.nameTextBox1.Location = new System.Drawing.Point(54, 77);
-            this.nameTextBox1.Name = "nameTextBox1";
-            this.nameTextBox1.Size = new System.Drawing.Size(64, 22);
-            this.nameTextBox1.TabIndex = 33;
-            // 
-            // picPictureBox
-            // 
-            this.picPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.cityBindingSource, "pic", true));
-            this.picPictureBox.Location = new System.Drawing.Point(142, 49);
-            this.picPictureBox.Name = "picPictureBox";
-            this.picPictureBox.Size = new System.Drawing.Size(362, 152);
-            this.picPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPictureBox.TabIndex = 35;
-            this.picPictureBox.TabStop = false;
-            // 
-            // cityDataGridView
-            // 
-            this.cityDataGridView.AutoGenerateColumns = false;
-            this.cityDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.cityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cityDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewImageColumn1});
-            this.cityDataGridView.DataSource = this.cityBindingSource;
-            this.cityDataGridView.Location = new System.Drawing.Point(17, 224);
-            this.cityDataGridView.Name = "cityDataGridView";
-            this.cityDataGridView.RowTemplate.Height = 24;
-            this.cityDataGridView.Size = new System.Drawing.Size(487, 220);
-            this.cityDataGridView.TabIndex = 30;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Gray;
-            this.button4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(33, 177);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 24);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Browse";
-            this.button4.UseVisualStyleBackColor = false;
-            // 
-            // tp2
-            // 
-            this.tp2.Controls.Add(this.splitContainer3);
-            this.tp2.Location = new System.Drawing.Point(4, 22);
-            this.tp2.Name = "tp2";
-            this.tp2.Padding = new System.Windows.Forms.Padding(3);
-            this.tp2.Size = new System.Drawing.Size(906, 480);
-            this.tp2.TabIndex = 2;
-            this.tp2.Text = "新增相片管理";
-            this.tp2.UseVisualStyleBackColor = true;
-            // 
-            // splitContainer3
-            // 
-            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer3.Location = new System.Drawing.Point(3, 3);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
-            // 
-            // splitContainer3.Panel1
-            // 
-            this.splitContainer3.Panel1.Controls.Add(this.btnBrowse);
-            this.splitContainer3.Panel1.Controls.Add(this.comboBox1);
-            this.splitContainer3.Panel1.Controls.Add(this.label3);
-            // 
-            // splitContainer3.Panel2
-            // 
-            this.splitContainer3.Panel2.Controls.Add(this.flowLayoutPanel1);
-            this.splitContainer3.Size = new System.Drawing.Size(900, 474);
-            this.splitContainer3.SplitterDistance = 129;
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.Location = new System.Drawing.Point(28, 65);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(166, 23);
-            this.btnBrowse.TabIndex = 2;
-            this.btnBrowse.Text = "Floder....";
-            this.btnBrowse.UseVisualStyleBackColor = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(73, 22);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 12);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "選分類";
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(900, 341);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // openFileDialog
-            // 
-            this.openFileDialog.FileName = "openFileDialog";
-            // 
-            // cityNoBindingSource
-            // 
-            this.cityNoBindingSource.DataMember = "cityNo";
-            this.cityNoBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -609,42 +538,45 @@ namespace MyHW
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.Width = 57;
             // 
+            // cityNoBindingSource
+            // 
+            this.cityNoBindingSource.DataMember = "cityNo";
+            this.cityNoBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityNoBindingSource, "Name", true));
+            this.nameTextBox.Location = new System.Drawing.Point(93, 77);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(100, 22);
+            this.nameTextBox.TabIndex = 4;
+            // 
+            // idTextBox
+            // 
+            this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityNoBindingSource, "Id", true));
+            this.idTextBox.Location = new System.Drawing.Point(93, 49);
+            this.idTextBox.Name = "idTextBox";
+            this.idTextBox.Size = new System.Drawing.Size(100, 22);
+            this.idTextBox.TabIndex = 2;
+            this.idTextBox.TextChanged += new System.EventHandler(this.idTextBox_TextChanged);
+            // 
+            // idTextBox1
+            // 
+            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityBindingSource, "Id", true));
+            this.idTextBox1.Location = new System.Drawing.Point(54, 49);
+            this.idTextBox1.Name = "idTextBox1";
+            this.idTextBox1.Size = new System.Drawing.Size(64, 22);
+            this.idTextBox1.TabIndex = 31;
+            // 
             // cityBindingSource
             // 
             this.cityBindingSource.DataMember = "city";
             this.cityBindingSource.DataSource = this.dataSet1;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriesTableAdapter = null;
-            this.tableAdapterManager.cityNoTableAdapter = null;
-            this.tableAdapterManager.cityTableAdapter = null;
-            this.tableAdapterManager.Connection = null;
-            this.tableAdapterManager.CustomersTableAdapter = null;
-            this.tableAdapterManager.ProductPhotoTableAdapter = null;
-            this.tableAdapterManager.ProductsTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = MyHW.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.CategoriesTableAdapter = null;
-            this.tableAdapterManager1.cityNoTableAdapter = null;
-            this.tableAdapterManager1.cityTableAdapter = null;
-            this.tableAdapterManager1.Connection = null;
-            this.tableAdapterManager1.CustomersTableAdapter = null;
-            this.tableAdapterManager1.ProductPhotoTableAdapter = null;
-            this.tableAdapterManager1.ProductsTableAdapter = null;
-            this.tableAdapterManager1.UpdateOrder = MyHW.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // cityNoTableAdapter
-            // 
-            this.cityNoTableAdapter.ClearBeforeFill = true;
-            // 
-            // cityTableAdapter1
-            // 
-            this.cityTableAdapter1.ClearBeforeFill = true;
             // 
             // bindingNavigator1
             // 
@@ -686,8 +618,8 @@ namespace MyHW
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(27, 22);
-            this.bindingNavigatorCountItem.Text = "/{0}";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 22);
+            this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "項目總數";
             // 
             // bindingNavigatorDeleteItem
@@ -726,7 +658,6 @@ namespace MyHW
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "位置";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -760,22 +691,54 @@ namespace MyHW
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
             // 
-            // idLabel1
+            // nameTextBox1
             // 
-            idLabel1.AutoSize = true;
-            idLabel1.Location = new System.Drawing.Point(25, 54);
-            idLabel1.Name = "idLabel1";
-            idLabel1.Size = new System.Drawing.Size(18, 12);
-            idLabel1.TabIndex = 38;
-            idLabel1.Text = "Id:";
+            this.nameTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityBindingSource, "name", true));
+            this.nameTextBox1.Location = new System.Drawing.Point(54, 77);
+            this.nameTextBox1.Name = "nameTextBox1";
+            this.nameTextBox1.Size = new System.Drawing.Size(64, 22);
+            this.nameTextBox1.TabIndex = 33;
             // 
-            // idTextBox1
+            // picPictureBox
             // 
-            this.idTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cityBindingSource, "Id", true));
-            this.idTextBox1.Location = new System.Drawing.Point(54, 49);
-            this.idTextBox1.Name = "idTextBox1";
-            this.idTextBox1.Size = new System.Drawing.Size(64, 22);
-            this.idTextBox1.TabIndex = 31;
+            this.picPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.cityBindingSource, "pic", true));
+            this.picPictureBox.Location = new System.Drawing.Point(142, 49);
+            this.picPictureBox.Name = "picPictureBox";
+            this.picPictureBox.Size = new System.Drawing.Size(362, 152);
+            this.picPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPictureBox.TabIndex = 35;
+            this.picPictureBox.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(33, 177);
+            this.button4.Margin = new System.Windows.Forms.Padding(0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(85, 24);
+            this.button4.TabIndex = 28;
+            this.button4.Text = "Browse";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.btnBrowse2_Click);
+            // 
+            // cityDataGridView
+            // 
+            this.cityDataGridView.AutoGenerateColumns = false;
+            this.cityDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.cityDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cityDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewImageColumn1});
+            this.cityDataGridView.DataSource = this.cityBindingSource;
+            this.cityDataGridView.Location = new System.Drawing.Point(17, 224);
+            this.cityDataGridView.Name = "cityDataGridView";
+            this.cityDataGridView.RowTemplate.Height = 24;
+            this.cityDataGridView.Size = new System.Drawing.Size(487, 220);
+            this.cityDataGridView.TabIndex = 30;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -797,14 +760,50 @@ namespace MyHW
             this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             // 
-            // FrmMyAlbum_V1
+            // openFileDialog
+            // 
+            this.openFileDialog.FileName = "openFileDialog";
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CategoriesTableAdapter = null;
+            this.tableAdapterManager.cityNoTableAdapter = null;
+            this.tableAdapterManager.cityTableAdapter = null;
+            this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.CustomersTableAdapter = null;
+            this.tableAdapterManager.ProductPhotoTableAdapter = null;
+            this.tableAdapterManager.ProductsTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = MyHW.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.CategoriesTableAdapter = null;
+            this.tableAdapterManager1.cityNoTableAdapter = null;
+            this.tableAdapterManager1.cityTableAdapter = null;
+            this.tableAdapterManager1.Connection = null;
+            this.tableAdapterManager1.CustomersTableAdapter = null;
+            this.tableAdapterManager1.ProductPhotoTableAdapter = null;
+            this.tableAdapterManager1.ProductsTableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = MyHW.DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // cityNoTableAdapter
+            // 
+            this.cityNoTableAdapter.ClearBeforeFill = true;
+            // 
+            // cityTableAdapter1
+            // 
+            this.cityTableAdapter1.ClearBeforeFill = true;
+            // 
+            // FrmMyAlbum_Final
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(914, 573);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FrmMyAlbum_V1";
+            this.Name = "FrmMyAlbum_Final";
             this.Text = "FrmMyAlbum_V1";
             this.Load += new System.EventHandler(this.FrmMyAlbum_V1_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -818,6 +817,12 @@ namespace MyHW
             this.splitContainer4.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).EndInit();
             this.splitContainer4.ResumeLayout(false);
+            this.tp2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
             this.tp3.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
@@ -829,22 +834,16 @@ namespace MyHW
             this.bindingNavigator.ResumeLayout(false);
             this.bindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cityNoDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).EndInit();
-            this.tp2.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityNoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cityBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
